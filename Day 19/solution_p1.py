@@ -38,7 +38,6 @@ def traverse(blueprint, time, robots, materials, geode, cache):
         (robots[3] * time) + max_geodes_every_minute(time)
     if geode > max_geode_possible:
         return geode
-    geode = 0
     max_ore = max([blueprint[0], blueprint[1],
                   blueprint[2][0], blueprint[3][0]])
     max_clay = blueprint[2][1]

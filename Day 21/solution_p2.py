@@ -1,5 +1,4 @@
 import time
-from sympy.solvers import solve
 
 
 def parse(line):
@@ -30,5 +29,6 @@ with open('input.txt') as f:
         graph[monkey] = job
     graph['root'] = [graph['root'][0], '-', graph['root'][2]]
     equation = form_equation('root', graph, str())
-    print('The number you yell is :', solve(equation, 'x')[0])
+    complex_num = eval(equation.replace('x', '1j'))
+    print('The number you yell is :', int(-complex_num.real / complex_num.imag))
     print('Time taken :', time.time() - start)

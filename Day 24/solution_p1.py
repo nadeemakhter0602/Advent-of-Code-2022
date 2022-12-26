@@ -32,7 +32,6 @@ def find_blizzard_positions(blizzard_positions, row_end, col_end):
 def traverse(curr, goal, time, blizzard_positions, row_end, col_end, visited):
     queue = [(curr, time)]
     min_time = float('inf')
-    cache = dict()
     blizzard_positions_in_time = find_blizzard_positions(blizzard_positions,
                                                          row_end,
                                                          col_end)
